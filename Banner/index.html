@@ -1,0 +1,173 @@
+<!DOCTYPE html> 
+<html lang="pt-br">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Gabriel Buarque</title>
+
+<style>
+    body {
+        margin: 0;
+        background: linear-gradient(135deg, #000000, #141313);
+        color: #d3d3d3;
+        font-family: "Fira Code", monospace;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        text-align: center;
+        overflow-x: hidden;
+    }
+
+    .top-wave, .bottom-wave {
+        width: 100%;
+        display: block;
+        opacity: 0.35;
+        filter: grayscale(100%);
+        pointer-events: none;
+    }
+
+    .profile img {
+        width: 160px;
+        height: 160px;
+        border-radius: 50%;
+        object-fit: cover;
+        margin-top: -40px;
+        border: 2px solid #3b3a3a;
+        background: #0d0d0d;
+        animation: fadeIn 1.4s ease forwards;
+        box-shadow: 0 0 25px rgba(84, 79, 95, 0.4);
+    }
+
+    .typewriter {
+        margin-top: 20px;
+        font-size: 28px;
+        white-space: nowrap;
+        overflow: hidden;
+        border-right: 2px solid #d3d3d3;
+        animation: typing 4s steps(36) infinite,
+                   blink 0.7s step-end infinite;
+        background: linear-gradient(90deg, #ffffff, #1a0f7e);
+        -webkit-background-clip: text;
+        color: transparent;
+        text-shadow: none;
+    }
+
+    @keyframes typing {
+        0% { width: 0ch; }
+        40% { width: 36ch; }  
+        60% { width: 36ch; }  
+        100% { width: 0ch; } 
+    }
+
+    @keyframes blink {
+        0%, 100% { border-color: transparent; }
+        50% { border-color: #d3d3d3; }
+    }
+
+    @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(10px); }
+        to { opacity: 1; transform: translateY(0); }
+    }
+
+    .btn-container {
+        margin-top: 25px;
+    }
+
+    .btn {
+        background: #1a1a1a;
+        color: #d3d3d3;
+        padding: 10px 25px;
+        margin: 5px;
+        border-radius: 8px;
+        font-weight: bold;
+        text-decoration: none;
+        border: 1px solid #3a3a3a;
+        transition: 0.3s;
+        box-shadow: 0 0 0px transparent;
+    }
+
+    .btn:hover {
+        background: #444;
+        border-color: #777;
+        transform: translateY(-3px);
+    }
+
+    /* SEÇÃO DE LINGUAGENS */
+    .languages-section {
+        margin-top: 53px;
+        animation: fadeIn 2s ease forwards;
+        font-family: monospace;
+    }
+
+    .languages-title {
+        font-size: 20px;
+        margin-bottom: 12px;
+        opacity: 0;
+        animation: fadeIn 1.5s ease forwards 0.5s;
+    }
+
+    .icons {
+        display: flex;
+        justify-content: center;
+        gap: 16px;
+        flex-wrap: wrap;
+        margin-top: 10px;
+    }
+
+    .icons img {
+        width: 50px;
+        height: 50px;
+        transition: 0.3s;
+        filter: drop-shadow(0 0 4px rgba(255,255,255,0.1));
+        opacity: 0;
+        animation: fadeIn 1s ease forwards;
+    }
+
+    .icons img:nth-child(1) { animation-delay: 1.6s; }
+    .icons img:nth-child(2) { animation-delay: 1.9s; }
+    .icons img:nth-child(3) { animation-delay: 2.2s; }
+    .icons img:nth-child(4) { animation-delay: 2.5s; }
+    .icons img:nth-child(5) { animation-delay: 2.8s; }
+
+    .icons img:hover {
+        transform: translateY(-4px) scale(1.07);
+        filter: drop-shadow(0 0 6px rgba(255,255,255,0.25));
+    }
+</style>
+</head>
+
+<body>
+
+<div class="profile">
+    <img src="profile.png" alt="Foto de perfil">
+</div>
+
+<h1 class="typewriter">Whats Up! My name is Gabriel Buarque.</h1>
+
+<div class="btn-container">
+    <a href="https://www.linkedin.com/in/gabriel-buarque-888101301/" class="btn">LINKEDIN</a>
+    <a href="https://www.instagram.com/gabrielbuarq_?igsh=MWs3Mmt6NDloMWM4NQ%3D%3D&utm_source=qr" class="btn">INSTAGRAM</a>
+    <a href="https://github.com/gabriel-buarque" class="btn">GITHUB</a>
+</div>
+
+<!-- LINGUAGENS -->
+<div class="languages-section">
+    <br><br><div class="languages-title">💻 Languages I'm developing:</div><p></p><p></p>
+
+    <div class="icons">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/javascript/javascript-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg">
+        <img src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg">
+    </div>
+</div>
+
+<!-- ONDA INFERIOR -->
+<img src="https://raw.githubusercontent.com/gist/RenanSchmitt/5d8ec05fd9b9c3170f12e51e74a53ce7/raw/135c8db05d4956229087f47afab5910fbc643a4b/wave-bottom.svg"
+     class="bottom-wave">
+
+</body>
+</html>
